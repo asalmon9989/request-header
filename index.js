@@ -8,6 +8,7 @@ const port = process.env.PORT || 8080;
 
 
 app.get('/', function(req, res) {
+	const ua = parser(req.headers['user-agent']);
 
 	const clientInfo = {
 		ipaddress: req.ip,
